@@ -1,0 +1,57 @@
+// 說明：以 // 開始的行為註釋
+// 以下文字中的數字僅為示例，不要以為各參數的值固定為這些數
+
+// 宿舍樓的初始層數
+FLOOR 10
+
+// 每層的初始房間數
+ROOM 20
+
+// 每間房的初始容量（即入住人數）
+CAPACITY 8
+
+// 每單位重量食物可以增加的體重
+FOOD_INC_WEIGHT 3
+
+// 每單位重量食物的價格
+FOOD_COST 50
+
+// 每單位時間學習減少的體重
+STUDY_DEC_WEIGHT 1
+
+// 每單位時間學習增加的知識
+STUDY_INC_KNOWLEDGE 3
+
+// 每單位時間化妝可以增加的容貌
+MAKEUP_INC_LOOKS 1
+
+// 每單位時間化妝消耗的金錢
+MAKEUP_COST 100
+
+// 每單位時間運動可以增加的健康
+EXERCISE_INC_HEALTH 2
+
+// 每單位時間打工減少的體重
+WORK_DEC_WEIGHT 2
+
+// 每單位時間打工賺取的金錢
+WORK_INC_MONEY 20
+
+// 可以建立戀愛關係的相對魅力差的閾值
+LOVER_CHARM_DELTA 0.05
+
+
+// 男生的狀態初始值，依次為：體重、金錢、知識、健康、魅力
+MALE_WEIGHT 120
+MALE_MONEY 10000
+MALE_KNOWLEDG 60
+MALE_HEALTH 75
+MALE_CHARM 70
+
+// 女生的狀態初始值，依次為：體重、金錢、知識、容貌、魅力
+FEMALE_WEIGHT 100
+FEMALE_MONEY 10000
+FEMALE_KNOWLEDGE 60
+FEMALE_LOOKS 70
+FEMALE_CHARM 75
+

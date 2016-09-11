@@ -1,0 +1,51 @@
+//============================
+//实现宿舍的分配
+//============================
+void distributeRooms(Building&,const std::map<std::string,MaleStudent>& , 
+	const std::map<std::string,FemaleStudent>&);
+
+
+void distributeRooms(Building& building, const map<string, MaleStudent>& m_ss,
+	                   const map<string, FemaleStudent>& f_ss)
+{
+	int i, j;
+	for (auto m_s : m_ss)
+	{
+		i = m_s.second.floorID - 1;
+		j = m_s.second.roomID - 1;
+		if (building.floors[i].rooms[j].lived_ss > building.floors[i].rooms[j].capacity)
+			continue;
+		if (building.floors[i].rooms[j].gender =="none")
+			building.floors[i].rooms[j].gender = m_s.second.Gender();
+		if (building.floors[i].rooms[j].gender!="none" &&
+			building.floors[i].rooms[j].gender != m_s.second.Gender())
+		{
+			cout << "那女不能同住!" << endl;
+			continue;
+		}
+		
+		//分配宿舍
+		building.floors[i].rooms[j].students.push_back(m_s.second.Name());
+		building.floors[i].rooms[j].lived_ss++ ;
+	}
+
+	for (auto f_s : f_ss)
+	{
+		i = f_s.second.floorID - 1;
+		j = f_s.second.roomID - 1;
+		if (building.floors[i].rooms[j].lived_ss > building.floors[i].rooms[j].capacity)
+			continue;
+		if (building.floors[i].rooms[j].gender == "none")
+			building.floors[i].rooms[j].gender = f_s.second.Gender();
+		else if (building.floors[i].rooms[j].gender != "none" &&
+			building.floors[i].rooms[j].gender != f_s.second.Gender())
+		{
+			//cout << "那女不能同住!" << endl;
+			continue;
+		}
+
+		//分配宿舍
+		building.floors[i].rooms[j].students.push_back(f_s.second.Name());
+		building.floors[i].rooms[j].lived_ss++;
+	}
+}

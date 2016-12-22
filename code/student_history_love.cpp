@@ -139,7 +139,7 @@ Return: 无
 *******************************************************************************************************/
 int search_love_history(map<string, MaleStudent> m_ss, map<string, FemaleStudent> f_ss, map<string, MaleStudent> Qm_ss, map<string, FemaleStudent> Qf_ss)
 {
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	string name;
 	cin >> name;
 

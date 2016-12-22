@@ -111,7 +111,7 @@ int search_room_by_name(const map<string, MaleStudent>& m_ss,const map<string, F
 	string name;
 	string ifcontinue;
 	cout << Left_Padding;
-	cout << "请输入学生的名字:\n" << endl;
+	cout << "请输入学生的名字(中间不能含空格):\n" << endl;
 
 	cout << Left_Padding;
 	std::cin >> name;

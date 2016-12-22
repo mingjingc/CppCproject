@@ -150,7 +150,7 @@ void weight_search_by_name(const vector<attributeName>& weight_names)
 {
 	string note = "体重";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(weight_names, name, note);
 }
@@ -215,7 +215,7 @@ void money_search_by_name(const vector<attributeName>& money_names)
 {
 	string note = "金钱";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(money_names, name, note);
 }
@@ -281,7 +281,7 @@ void knowledge_search_by_name(const vector<attributeName>& knowledge_names)
 {
 	string note = "知识量";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(knowledge_names, name, note);
 }
@@ -346,7 +346,7 @@ void charm_search_by_name(const vector<attributeName>& charm_names)
 {
 	string note = "魅力值";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(charm_names, name, note);
 }
@@ -412,7 +412,7 @@ void health_search_by_name(const vector<attributeName>& health_names)
 {
 	string note = "学生健康值";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(health_names, name, note);
 }
@@ -479,7 +479,7 @@ void looks_search_by_name(const vector<attributeName>& looks_names)
 {
 	string note = "容貌值";
 	string name;
-	cout << Left_Padding << "请输入学生名字: ";
+	cout << Left_Padding << "请输入学生名字(中间不能含空格): ";
 	cin >> name;
 	attribute_search_by_name(looks_names, name, note);
 }
@@ -636,5 +636,6 @@ void attribute_search_by_name(const vector<attributeName>& attribute_names,
 			}
 				
 		}
-		cout << endl << Left_Padding << "该学生不存在";
+		cout << endl << Left_Padding << "该学生不存在"<<endl;
+		system("pause");
 }
